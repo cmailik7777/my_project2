@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:padding="4dp"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <!---android:id="@+id/rz_article_art"-->
+
+    <TextView
+        android:text="Артикул:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView94"
+        android:layout_alignBaseline="@+id/rz_article_art"
+        android:layout_alignBottom="@+id/rz_article_art"
+        android:layout_toRightOf="@+id/rz_article_count"
+        android:layout_toEndOf="@+id/rz_article_count" />
+
+    <TextView
+        android:text="99"
+        android:textColor="@color/black"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView94"
+        android:layout_alignBottom="@+id/textView94"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rz_article_count" />
+
+    <TextView
+        android:id="@+id/rz_article_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="12.12.2012 00.00.00" />
+
+    <TextView
+        android:text="592616151515"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rz_article_art"
+        android:layout_below="@+id/rz_article_date"
+        android:layout_toRightOf="@+id/textView94"
+        android:layout_toEndOf="@+id/textView94" />
+
+    <TextView
+        android:text="Ответсвенный:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView96"
+        android:layout_below="@+id/textView94"
+        android:layout_alignLeft="@+id/textView94"
+        android:layout_alignStart="@+id/textView94" />
+
+    <TextView
+        android:id="@+id/rz_article_otvet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView96"
+        android:layout_alignBottom="@+id/textView96"
+        android:layout_toEndOf="@+id/textView96"
+        android:layout_toRightOf="@+id/textView96"
+        android:padding="4dp"
+        android:text="Никтин Дмитраий"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Кол-во:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView97"
+        android:layout_below="@+id/textView96"
+        android:layout_alignLeft="@+id/textView96"
+        android:layout_alignStart="@+id/textView96" />
+
+    <TextView
+        android:text="100"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView97"
+        android:layout_alignBottom="@+id/textView97"
+        android:layout_toRightOf="@+id/textView97"
+        android:layout_toEndOf="@+id/textView97"
+        android:id="@+id/rz_article_col" />
+
+    <TextView
+        android:text="Цена:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView98"
+        android:layout_below="@+id/textView97"
+        android:layout_alignLeft="@+id/textView97"
+        android:layout_alignStart="@+id/textView97" />
+
+    <TextView
+        android:id="@+id/rz_article_summa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView98"
+        android:layout_alignBottom="@+id/textView98"
+        android:layout_toEndOf="@+id/textView98"
+        android:layout_toRightOf="@+id/textView98"
+        android:padding="4dp"
+        android:text="100 000 тг"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Склад:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView99"
+        android:layout_below="@+id/textView98"
+        android:layout_alignLeft="@+id/textView98"
+        android:layout_alignStart="@+id/textView98" />
+
+    <TextView
+        android:id="@+id/rz_article_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView99"
+        android:layout_alignBottom="@+id/textView99"
+        android:layout_toEndOf="@+id/textView99"
+        android:layout_toRightOf="@+id/textView99"
+        android:padding="4dp"
+        android:text="Основной"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Сумма:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView100"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/greenListView"
+        android:layout_below="@+id/textView99"
+        android:layout_toLeftOf="@+id/rz_article_col"
+        android:layout_toStartOf="@+id/rz_article_col" />
+
+    <TextView
+        android:id="@+id/rz_article_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView100"
+        android:layout_alignBottom="@+id/textView100"
+        android:layout_toEndOf="@+id/textView100"
+        android:layout_toRightOf="@+id/textView100"
+        android:padding="4dp"
+        android:text="10000000 тг"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Номенклатура:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView95"
+        android:layout_below="@+id/textView100"
+        android:layout_alignLeft="@+id/textView99"
+        android:layout_alignStart="@+id/textView99" />
+
+    <TextView
+        android:id="@+id/rz_article_nomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView95"
+        android:layout_alignStart="@+id/textView95"
+        android:layout_below="@+id/textView95"
+        android:padding="4dp"
+        android:text="щшойщшгаврыгфщврпгщыврпщшгаыргвшщариыгшпашвыигапывншаопвашывгр"
+        android:textColor="@color/black" />
+
+
+
+</RelativeLayout>

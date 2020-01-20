@@ -1,0 +1,846 @@
+package com.myauto.designer;
+
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.ArrayAdapter;
+
+import com.google.zxing.Result;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+import static com.myauto.designer.Login.MY_PREFS_NAME;
+
+public class QRCode extends AppCompatActivity {
+
+    private ZXingScannerView scannerView;
+    private SevenP sevenP;
+    private NotSevenP notSevenP;
+    private ZaprosOpen zaprosOpen;
+    private ZaprosClose zaprosClose;
+    ProgressDialog progressDialog;
+
+    String IPSTRING,mob,pin;
+    String myOrderBarOpen,myOrderBarClose;
+    String myOrderBarOpenBar,myOrderBarCloseBar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_qrcode);
+
+        SharedPreferences prefsIP = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        IPSTRING = prefsIP.getString("ip", null);
+        mob = prefsIP.getString("mob", null);
+        pin = prefsIP.getString("pin", null);
+
+        scannerView = new ZXingScannerView(this);
+        setContentView(scannerView);
+
+        scannerView.setResultHandler(new ZXingScannerResultHandler());
+        scannerView.startCamera();
+
+        Intent intent = getIntent();
+        myOrderBarOpen = intent.getStringExtra("myOrderBarOpen");
+        myOrderBarClose = intent.getStringExtra("myOrderBarClose");
+        myOrderBarOpenBar = intent.getStringExtra("myOrderBarOpenBar");
+        myOrderBarCloseBar = intent.getStringExtra("myOrderBarCloseBar");
+
+    }
+
+
+        private class ZXingScannerResultHandler implements ZXingScannerView.ResultHandler{
+
+        @Override
+                public void handleResult(final Result result) {
+                    final String resultCode = result.getText();
+                    //Toast.makeText(QRCode.this, resultCode, Toast.LENGTH_LONG).show();
+
+                    if(myOrderBarOpen!=null){
+                        checkIn(resultCode);
+                        scannerView.stopCamera();
+                    }else if (myOrderBarCloseBar!=null){
+                        checkIn(resultCode);
+                        scannerView.stopCamera();
+                    }else{
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("QRCode распознан!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage(resultCode+" \nВерно?")
+                                .setCancelable(false)
+                                .setNegativeButton("Нет",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                scannerView = new ZXingScannerView(QRCode.this);
+                                                scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                                setContentView(scannerView);
+                                                scannerView.startCamera();
+                                                dialog.dismiss();
+                                            }
+                                        })
+                                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        checkIn(resultCode);
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+
+                        scannerView.stopCamera();
+            }
+        }
+    }
+
+    public void checkIn(String resultCode){
+        if(myOrderBarOpen!=null){
+            if(myOrderBarOpenBar.equals(resultCode)){
+                progressDialog = new ProgressDialog(QRCode.this);
+                progressDialog.setMessage("Пожалуйста подождите....");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        zaprosOpen = new ZaprosOpen();
+                        zaprosOpen.start(mob,pin,myOrderBarOpen);
+
+                        try {
+                            zaprosOpen.join();
+                        } catch (InterruptedException ie) {
+                            Log.e("pass 0", ie.getMessage());
+                        }
+                        progressDialog.dismiss();
+                    }
+                }).start();
+
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                builder.setTitle("QRCode")
+                        .setIcon(R.drawable.iconlogo)
+                        .setMessage("QR Код не соответсвует текущему! \n"+"Результат сканирования: "+resultCode+" \n QR код заявки: "+myOrderBarOpenBar)
+                        .setCancelable(false)
+                        .setNegativeButton("ок",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        scannerView = new ZXingScannerView(QRCode.this);
+                                        scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                        setContentView(scannerView);
+                                        scannerView.startCamera();
+                                        dialog.dismiss();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        }else if(myOrderBarCloseBar!=null){
+            if(myOrderBarCloseBar.equals(resultCode)){
+                progressDialog = new ProgressDialog(QRCode.this);
+                progressDialog.setMessage("Пожалуйста подождите....");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        zaprosClose = new ZaprosClose();
+                        zaprosClose.start(mob,pin,myOrderBarClose);
+
+                        try {
+                            zaprosClose.join();
+                        } catch (InterruptedException ie) {
+                            Log.e("pass 0", ie.getMessage());
+                        }
+                        progressDialog.dismiss();
+                    }
+                }).start();
+
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                builder.setTitle("QRCode")
+                        .setIcon(R.drawable.iconlogo)
+                        .setMessage("QR Код не соответсвует текущему документу!")
+                        .setCancelable(false)
+                        .setNegativeButton("ок",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        scannerView = new ZXingScannerView(QRCode.this);
+                                        scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                        setContentView(scannerView);
+                                        scannerView.startCamera();
+                                        dialog.dismiss();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        }else{
+            if (resultCode.contains("-07-")){
+                Seven(resultCode);
+            }else{
+                NotSeven(resultCode);
+            }
+        }
+    }
+
+    //забрать груз
+    public class ZaprosOpen extends Thread {
+
+        String MobS;
+        String PinS;
+        String NumS;
+
+        InputStream is = null;
+        String result = null;
+        String line = null;
+
+
+        public void run() {
+
+            ArrayList<NameValuePair> NameValuerPair = new ArrayList<NameValuePair>(10);
+
+            NameValuerPair.add(new BasicNameValuePair("mob", MobS));
+            NameValuerPair.add(new BasicNameValuePair("pin", PinS));
+            NameValuerPair.add(new BasicNameValuePair("num", NumS));
+            Log.e("BasicNameValuePair num ",NumS);
+            try {
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost httpPost = new HttpPost("http://gps-monitor.kz/oleg/mobile/nd/setDriverStatusOpenOrder.php");
+                httpPost.setEntity(new UrlEncodedFormEntity(NameValuerPair, "UTF-8"));
+                HttpResponse resArr = httpClient.execute(httpPost);
+                HttpEntity entity = resArr.getEntity();
+                is = entity.getContent();
+                 
+            } catch (Exception e) {
+                Log.e("Fail 1", e.toString());
+            }
+            try {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
+                StringBuilder sb = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
+                }
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "[}][,][{]");
+                }
+                is.close();
+                result = sb.toString();
+                Log.e("pass 2", "connection succes " + result);
+
+            } catch (Exception e) {
+                Log.e("Fail 2", e.toString());
+            }
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+
+                final String res = jsonObject.getString("res");
+                Log.e("json", "Результат: res" + res);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage(res)
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                finish();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+                Log.e("<><><><><>  Result  ", result + " ==  ==== )))");
+            } catch (Exception e) {
+                Log.e("Fail 3", e.toString());
+            }
+        }
+
+
+        public void start(String mobp, String pinp, String num) {
+            this.MobS = mobp;
+            this.PinS = pinp;
+            this.NumS = num;
+            this.start();
+        }
+
+        public String resOrg() {
+            return result;
+        }
+
+    }
+
+    //груз доставлен
+    public class ZaprosClose extends Thread {
+
+        String MobS;
+        String PinS;
+        String NumS;
+
+        InputStream is = null;
+        String result = null;
+        String line = null;
+
+
+        public void run() {
+
+            ArrayList<NameValuePair> NameValuerPair = new ArrayList<NameValuePair>(10);
+
+            NameValuerPair.add(new BasicNameValuePair("mob", MobS));
+            NameValuerPair.add(new BasicNameValuePair("pin", PinS));
+            NameValuerPair.add(new BasicNameValuePair("num", NumS));
+            try {
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost httpPost = new HttpPost("http://gps-monitor.kz/oleg/mobile/nd/setDriverStatusCloseOrder.php");
+                httpPost.setEntity(new UrlEncodedFormEntity(NameValuerPair, "UTF-8"));
+                HttpResponse resArr = httpClient.execute(httpPost);
+                HttpEntity entity = resArr.getEntity();
+                is = entity.getContent();
+                Log.e("pass 1", "connection succes");
+            } catch (Exception e) {
+                Log.e("Fail 1", e.toString());
+            }
+            try {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
+                StringBuilder sb = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
+                }
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "[}][,][{]");
+                }
+                is.close();
+                result = sb.toString();
+                Log.e("pass 2", "connection succes " + result);
+
+            } catch (Exception e) {
+                Log.e("Fail 2", e.toString());
+            }
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+
+                final String res = jsonObject.getString("res");
+                Log.e("json", "Результат: res" + res);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage(res)
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                finish();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+
+                Log.e("<><><><><>  Result  ", result + " ==  ==== )))");
+            } catch (Exception e) {
+                Log.e("Fail 3", e.toString());
+            }
+        }
+
+
+        public void start(String mobp, String pinp, String num) {
+            this.MobS = mobp;
+            this.PinS = pinp;
+            this.NumS = num;
+            this.start();
+        }
+
+        public String resOrg() {
+            return result;
+        }
+
+    }
+
+    public void Seven(final String resultCode){
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog = new ProgressDialog(QRCode.this);
+                progressDialog.setMessage("Пожалуйста подождите...");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+            }
+        });
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                AlertDialog.Builder builderSingle = new AlertDialog.Builder(QRCode.this);
+                builderSingle.setTitle("Выберите организацию");
+
+                final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(QRCode.this, android.R.layout.select_dialog_singlechoice);
+                arrayAdapter.add("A, новая ЗЧ, без упаковки");
+                arrayAdapter.add("B, поддержанная ЗЧ, отличного качества");
+                arrayAdapter.add("C, поддержанная ЗЧ");
+
+                builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String quality = arrayAdapter.getItem(which);
+                        SharedPreferences prefs2 = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                        String mob = prefs2.getString("mob", null);
+                        String pin = prefs2.getString("pin", null);
+
+                        sevenP = new SevenP();
+                        sevenP.start(mob,pin,resultCode,quality);
+
+                        try {
+                            sevenP.join();
+                        } catch (InterruptedException ie) {
+                            Log.e("pass 0", ie.getMessage());
+                        }
+
+                    }
+                });
+                builderSingle.show();
+            }
+        });
+
+
+    }
+
+    public void NotSeven(final String resultCode){
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog = new ProgressDialog(QRCode.this);
+                progressDialog.setMessage("Пожалуйста подождите...");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
+            }
+        });
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String mob = prefs.getString("mob", null);
+                String pin = prefs.getString("pin", null);
+
+                notSevenP = new NotSevenP();
+                notSevenP.start(mob,pin,resultCode);
+
+                try {
+                    notSevenP.join();
+                } catch (InterruptedException ie) {
+                    Log.e("pass 0", ie.getMessage());
+                }
+            }
+        }).start();
+    }
+
+
+    public class SevenP extends Thread {
+
+        String MobS;
+        String PinS;
+        String ResultCodeS;
+        String QualityS;
+
+        InputStream is = null;
+        String result = null;
+        String line = null;
+
+
+        public void run() {
+
+            ArrayList<NameValuePair> NameValuerPair = new ArrayList<NameValuePair>(10);
+
+            NameValuerPair.add(new BasicNameValuePair("mob", MobS));
+            NameValuerPair.add(new BasicNameValuePair("pin", PinS));
+            NameValuerPair.add(new BasicNameValuePair("qrCode", ResultCodeS));
+            NameValuerPair.add(new BasicNameValuePair("quality", QualityS));
+
+            try {
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost httpPost = new HttpPost("http://"+IPSTRING+"/oleg/mobile/test/setSecondHandSpareParts.php");
+                httpPost.setEntity(new UrlEncodedFormEntity(NameValuerPair, "UTF-8"));
+                HttpResponse resArr = httpClient.execute(httpPost);
+                HttpEntity entity = resArr.getEntity();
+                is = entity.getContent();
+                Log.e("pass 1", "connection succes");
+            } catch (Exception e) {
+                Log.e("Fail 1", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 1")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+            try {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
+                StringBuilder sb = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
+                }
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "[}][,][{]");
+                }
+                is.close();
+                result = sb.toString();
+                Log.e("pass 2", "connection succes " + result);
+
+            } catch (final Exception e) {
+                Log.e("Fail 2", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 2")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+            try {
+                //{"wheels":[{"date":"10.04.2018", "gos":"602DNA02", "description":"Р—єР°", "brand":"Yokohama", "size":"215/60/R16", "count":"4", "count_month":"2", "sum":"1В 000"} ]}
+
+                JSONObject jsonObject = new JSONObject(result);
+                String res = jsonObject.getString("res");
+                Log.e("json", "Результат ip: " + res);
+
+                if (res.equals("no")){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                            builder.setTitle("Ошибка!")
+                                    .setIcon(R.drawable.iconlogo)
+                                    .setMessage("Произошла ошибка")
+                                    .setCancelable(false)
+                                    .setNegativeButton("ок",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    scannerView = new ZXingScannerView(QRCode.this);
+                                                    scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                                    setContentView(scannerView);
+                                                    scannerView.startCamera();
+                                                    dialog.cancel();
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+                        }
+                    });
+                }else {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                            builder.setTitle("Успешно!")
+                                    .setIcon(R.drawable.iconlogo)
+                                    .setMessage("Операция с QR кодом прошла успешно!")
+                                    .setCancelable(false)
+                                    .setNegativeButton("ок",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    scannerView = new ZXingScannerView(QRCode.this);
+                                                    scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                                    setContentView(scannerView);
+                                                    scannerView.startCamera();
+                                                    dialog.cancel();
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+                        }
+                    });
+                }
+
+                progressDialog.dismiss();
+                Log.e("<><><><><>  Result  ", result + " ==  ==== )))");
+            } catch (Exception e) {
+                Log.e("Fail 3", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 3")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+        }
+
+
+        public void start(String mobp, String pin, String resultCode, String quality) {
+            this.MobS = mobp;
+            this.PinS = pin;
+            this.ResultCodeS = resultCode;
+            this.QualityS = quality;
+            this.start();
+        }
+
+        public String resOrg() {
+            return result;
+        }
+
+    }
+
+
+    public class NotSevenP extends Thread {
+
+        String MobS;
+        String PinS;
+        String ResultCodeS;
+
+        InputStream is = null;
+        String result = null;
+        String line = null;
+
+
+        public void run() {
+
+            ArrayList<NameValuePair> NameValuerPair = new ArrayList<NameValuePair>(10);
+
+            NameValuerPair.add(new BasicNameValuePair("mob", MobS));
+            NameValuerPair.add(new BasicNameValuePair("pin", PinS));
+            NameValuerPair.add(new BasicNameValuePair("qrCode", ResultCodeS));
+
+            try {
+                HttpClient httpClient = new DefaultHttpClient();
+                HttpPost httpPost = new HttpPost("http://"+IPSTRING+"/oleg/mobile/test/setFilialRepair.php");
+                httpPost.setEntity(new UrlEncodedFormEntity(NameValuerPair, "UTF-8"));
+                HttpResponse resArr = httpClient.execute(httpPost);
+                HttpEntity entity = resArr.getEntity();
+                is = entity.getContent();
+                Log.e("pass 1", "connection succes");
+            } catch (Exception e) {
+                Log.e("Fail 1", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 1")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+            try {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 8);
+                StringBuilder sb = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "\n");
+                }
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line + "[}][,][{]");
+                }
+                is.close();
+                result = sb.toString();
+                Log.e("pass 2", "connection succes " + result);
+
+            } catch (final Exception e) {
+                Log.e("Fail 2", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 2")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+            try {
+                //{"wheels":[{"date":"10.04.2018", "gos":"602DNA02", "description":"Р—єР°", "brand":"Yokohama", "size":"215/60/R16", "count":"4", "count_month":"2", "sum":"1В 000"} ]}
+
+                JSONObject jsonObject = new JSONObject(result);
+                final String res = jsonObject.getString("res");
+                Log.e("json", "Результат ip: " + res);
+
+                if (res.equals("no")){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                            builder.setTitle("Ошибка!")
+                                    .setIcon(R.drawable.iconlogo)
+                                    .setMessage("Произошла ошибка")
+                                    .setCancelable(false)
+                                    .setNegativeButton("ок",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    scannerView = new ZXingScannerView(QRCode.this);
+                                                    scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                                    setContentView(scannerView);
+                                                    scannerView.startCamera();
+                                                    dialog.cancel();
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+                        }
+                    });
+                }else{
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                            builder.setTitle("Окно предупреждения!")
+                                    .setIcon(R.drawable.iconlogo)
+                                    .setMessage(res)
+                                    .setCancelable(false)
+                                    .setNegativeButton("ок",
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    scannerView = new ZXingScannerView(QRCode.this);
+                                                    scannerView.setResultHandler(new ZXingScannerResultHandler());
+
+                                                    setContentView(scannerView);
+                                                    scannerView.startCamera();
+                                                    dialog.cancel();
+                                                }
+                                            });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+                        }
+                    });
+                }
+                progressDialog.dismiss();
+                Log.e("<><><><><>  Result  ", result + " ==  ==== )))");
+            } catch (Exception e) {
+                Log.e("Fail 3", e.toString());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressDialog.dismiss();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+                        builder.setTitle("Ошибка!")
+                                .setIcon(R.drawable.iconlogo)
+                                .setMessage("Произошла ошибка \n" +
+                                        "fail 3")
+                                .setCancelable(false)
+                                .setNegativeButton("ок",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
+            }
+        }
+
+
+        public void start(String mobp, String pin, String resultCode) {
+            this.MobS = mobp;
+            this.PinS = pin;
+            this.ResultCodeS = resultCode;
+            this.start();
+        }
+
+        public String resOrg() {
+            return result;
+        }
+
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        scannerView.stopCamera();
+        Log.e("-----QRCODE-----", "onPause");
+    }
+}

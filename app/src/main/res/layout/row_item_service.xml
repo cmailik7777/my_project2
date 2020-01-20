@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:padding="8dp" android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/Service_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/iconlogo" />
+
+    <TextView
+        android:id="@+id/Service_Name"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Калугин сергей"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Service_photo" />
+
+    <TextView
+        android:id="@+id/Service_Tel"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:text="+7 770 799 0000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Service_Type"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Service_photo" />
+
+    <TextView
+        android:id="@+id/Service_Type"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:text="Менеджер по работе с клиентами"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Service_photo"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Service_photo" />
+
+</RelativeLayout>

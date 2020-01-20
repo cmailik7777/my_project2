@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.rzMehanic"
+    tools:showIn="@layout/activity_rz_mehanic">
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout8">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/camera_white"
+            android:id="@+id/rz_mehanic_foto_gos"
+            android:layout_alignBottom="@+id/textInputLayout21"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLayout21"
+            android:layout_marginTop="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/rz_mehanic_foto_gos"
+            android:layout_toEndOf="@+id/rz_mehanic_foto_gos">
+
+            <EditText
+                android:id="@+id/rz_mehanic_gos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:ems="10"
+                android:hint="000AAA05"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789"
+                android:maxLines="1"
+                android:layout_marginTop="114dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/editP"
+                android:layout_alignStart="@+id/editP" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/rz_mehanic_search"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OtpravitRemZ"
+            android:text="Поиск"
+            android:textColor="@color/white"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:layout_below="@+id/rz_mehanic_foto_gos"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/rz_mehanic_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout8">
+
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/rz_mehanic_progressbar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

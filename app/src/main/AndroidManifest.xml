@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myauto.designer">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.QUICKBOOT_POWERON" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".garaj"
+            android:label="@string/title_activity_garaj"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gos"
+            android:label="@string/title_activity_gos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tovar"
+            android:label="@string/title_activity_tovar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pokypki"
+            android:label="@string/title_activity_pokypki"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mmrpit"
+            android:label="@string/title_activity_mmrpit"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".silkworm"
+            android:label="@string/title_activity_silkworm"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".trucksolutions"
+            android:label="@string/title_activity_trucksolutions"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".trucksolutionsZAKAZ"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".About"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profile2"
+            android:label="@string/title_activity_profile2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".About1"
+            android:label="@string/title_activity_about1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingProfile"
+            android:label="@string/title_activity_setting_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".push"
+            android:label="@string/title_activity_push"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OtkitRemz"
+            android:label="@string/title_activity_otkit_remz"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListRemZ"
+            android:label="@string/title_activity_list_rem_z"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FinalListRemZ"
+            android:label="@string/title_activity_final_list_rem_z"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailRemz"
+            android:label="@string/title_activity_detail_remz"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShowCamera"
+            android:label="@string/title_activity_show_camera"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShowCameraSearchRemZ"
+            android:label="@string/title_activity_show_camera_search_rem_z"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SeeAd"
+            android:label="@string/title_activity_see_ad"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InviteNewUser"
+            android:label="@string/title_activity_invite_new_user"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".wheels"
+            android:label="@string/title_activity_wheels"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Service"
+            android:label="@string/title_activity_service"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QRCode"
+            android:label="@string/title_activity_qrcode"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Invent"
+            android:label="@string/title_activity_invent"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".market"
+            android:label="@string/title_activity_market"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detailAd"
+            android:label="@string/title_activity_detail_ad"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyServiceActivity"
+            android:label="@string/title_activity_my_service"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyAd"
+            android:label="@string/title_activity_my_ad"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".myad_add"
+            android:label="@string/title_activity_myad_add"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Registration"
+            android:label="@string/title_activity_registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WorkTable"
+            android:label="@string/title_activity_work_table"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drBeginning"
+            android:label="@string/title_activity_dr_beginning"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drEndBeginning"
+            android:label="@string/title_activity_dr_end_beginning"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/myauto" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name=".Drivers"
+            android:label="@string/title_activity_drivers"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OrderDetail"
+            android:label="@string/title_activity_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rab_oper"
+            android:label="@string/title_activity_rab_oper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sozdat_rab_oper"
+            android:label="@string/title_activity_sozdat_rab_oper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detail_sozdat_rab_oper"
+            android:label="@string/title_activity_detail_sozdat_rab_oper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rzArticle"
+            android:label="@string/title_activity_rz_article"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".addrzArticle"
+            android:label="@string/title_activity_addrz_article"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".addrzSelectedArticle"
+            android:label="@string/title_activity_addrz_selected_article"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SotrInfo"
+            android:label="@string/title_activity_sotr_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SotrInfo_zp"
+            android:label="@string/title_activity_sotr_info_zp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".detail_news"
+            android:label="@string/title_activity_detail_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rzMehanic"
+            android:label="@string/title_activity_rz_mehanic"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rzMehanic_detail"
+            android:label="@string/title_activity_rz_mehanic_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Show_Cam_Mehanic"
+            android:label="@string/title_activity_show__cam__mehanic"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".choiceBrig"
+            android:label="@string/title_activity_choice_brig"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main_menu_Mehanic"
+            android:label="@string/title_activity_main_menu__mehanic"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mehanic_my_rab"
+            android:label="@string/title_activity_mehanic_my_rab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mehanic_brig_rab"
+            android:label="@string/title_activity_mehanic_brig_rab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mehanic_zap_num"
+            android:label="@string/title_activity_mehanic_zap_num"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mehanic_find_rab"
+            android:label="@string/title_activity_mehanic_find_rab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".newNews"
+            android:label="@string/title_activity_new_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

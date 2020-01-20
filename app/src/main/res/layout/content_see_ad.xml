@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/imageView14" />
+
+        <TextView
+            android:id="@+id/see_ad_head"
+            android:text="TIBUS В КАЗАХСТАНЕ"
+            android:layout_width="wrap_content"
+            android:padding="4dp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView14"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/see_ad_desc"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:text="TIBUS В КАЗАХСТАTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕTIBUS В КАЗАХСТАНЕНЕ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/see_ad_head"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/see_ad_otvet"
+            android:text="YBRBNBY LVBNHBQ"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_below="@+id/see_ad_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp" />
+
+        <TextView
+            android:id="@+id/see_ad_mob"
+            android:text="+7 777 7777777"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/see_ad_otvet"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/angry_btn"
+            android:text="Instagram"
+            android:textColor="#000000"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:drawableLeft="@drawable/instagram"
+            android:background="@drawable/nicebutton"
+            android:layout_below="@+id/see_ad_mob"
+            android:layout_centerHorizontal="true" />
+
+
+        <Button
+            android:id="@+id/btn_message"
+            android:text="Написать"
+            android:textColor="#000000"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+
+            android:visibility="invisible"
+            android:drawableLeft="@drawable/chat"
+            android:background="@drawable/nicebutton"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/angry_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="27dp"
+            android:layout_marginEnd="27dp" />
+
+
+        <Button
+            android:id="@+id/btn_call"
+            android:text="Позвонить"
+            android:textColor="#000000"
+
+            android:visibility="invisible"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_call_white_24dp"
+            android:background="@drawable/nicebutton"
+            android:layout_alignBaseline="@+id/btn_message"
+            android:layout_alignBottom="@+id/btn_message"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</ScrollView>

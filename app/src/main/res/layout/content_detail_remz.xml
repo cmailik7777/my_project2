@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.DetailRemz"
+    tools:showIn="@layout/activity_detail_remz">
+
+    <EditText
+        android:id="@+id/AcceptAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView25"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/MarkaAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView26"
+        android:layout_alignLeft="@+id/AcceptAuto"
+        android:layout_alignStart="@+id/AcceptAuto" />
+
+    <EditText
+        android:id="@+id/Vin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView27"
+        android:layout_alignLeft="@+id/MarkaAuto"
+        android:layout_alignStart="@+id/MarkaAuto"
+        android:layout_alignRight="@+id/MarkaAuto"
+        android:layout_alignEnd="@+id/MarkaAuto" />
+
+    <EditText
+        android:id="@+id/Dvig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView28"
+        android:layout_alignLeft="@+id/Vin"
+        android:layout_alignStart="@+id/Vin"
+        android:layout_alignRight="@+id/Vin"
+        android:layout_alignEnd="@+id/Vin" />
+
+    <EditText
+        android:id="@+id/GosD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView29"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/OdometrD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_alignBaseline="@+id/GosD"
+        android:layout_alignBottom="@+id/GosD"
+        android:layout_toRightOf="@+id/GosD"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/ClientD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView31"
+        android:layout_alignStart="@+id/button13"
+        android:layout_alignEnd="@+id/button13" />
+
+    <EditText
+        android:id="@+id/TelD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:enabled="false"
+        android:layout_below="@+id/textView32"
+        android:layout_alignLeft="@+id/ClientD"
+        android:layout_alignStart="@+id/ClientD"
+        android:layout_alignEnd="@+id/button13" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Принял автомобиль"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Марка машины"
+        android:layout_below="@+id/AcceptAuto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vin code"
+        android:layout_below="@+id/MarkaAuto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Номер двигателя"
+        android:layout_below="@+id/Vin"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Dvig"
+        android:text="Гос номер"
+        android:layout_toLeftOf="@+id/OdometrD"
+        android:layout_toStartOf="@+id/OdometrD" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показатель одометра"
+        android:layout_below="@+id/Dvig"
+        android:layout_toRightOf="@+id/textView29"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Клиент"
+        android:layout_below="@+id/GosD"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Телефон"
+        android:layout_below="@+id/ClientD"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_call_black_24dp"
+        android:onClick="CallClient"
+        android:layout_above="@+id/button13"
+        android:layout_toEndOf="@+id/TelD" />
+
+    <Button
+        android:visibility="invisible"
+        android:enabled="false"
+        android:id="@+id/button13"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TelD"
+        android:onClick="ClosedRemz"
+        android:text="Закрыть"
+        android:layout_alignStart="@+id/Dvig"
+        android:layout_alignEnd="@+id/Dvig" />
+</RelativeLayout>

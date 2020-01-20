@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/LabelListManagerGos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView39"
+            android:text="Mercedes"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/LabelManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Менеджер"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/LabelListTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="завка что делает?"
+            android:textColor="#a7a7a7"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_below="@+id/LabelListGos"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="21dp" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Номер заявки" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/LabelListManagerGos"
+            android:text="Гос. номер" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idList"
+            android:text="Марка машины"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/LabelTel" />
+
+        <TextView
+            android:id="@+id/LabelListGos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView40"
+            android:text="637XVA02"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/idList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView38"
+            android:text="ALM2022220"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/LabelListManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LabelListManager"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/textView39"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/LabelTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Телефон"
+            android:layout_below="@+id/LabelListStatys"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/LabelListStatys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LabelListStatys"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/LabelManager"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

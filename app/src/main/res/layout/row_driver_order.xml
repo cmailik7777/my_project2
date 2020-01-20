@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="6dp"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:padding="6dp"
+        android:background="@drawable/shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+
+            <ImageView
+                android:id="@+id/garaj_Img"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/iconlogo"
+                android:layout_alignTop="@+id/version_number1"
+                android:layout_alignParentStart="true" />
+
+
+
+            <TextView
+                android:id="@+id/version_number111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:padding="4dp"
+                android:text="Номер :"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignBaseline="@+id/type"
+                android:layout_alignBottom="@+id/type"
+                android:layout_toRightOf="@+id/garaj_Img"
+                android:layout_toEndOf="@+id/garaj_Img" />
+
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="номер"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/version_number"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/version_number111" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Модель :"
+                android:textColor="@android:color/darker_gray"
+                android:layout_below="@+id/version_num22ber111"
+                android:layout_alignStart="@+id/version_num22ber111" />
+
+            <TextView
+                android:id="@+id/Garaj_Model"
+                android:text="Модель"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView22"
+                android:layout_alignBottom="@+id/textView22"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView22" />
+
+
+            <TextView
+                android:id="@+id/version_num22ber111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:padding="4dp"
+                android:text="Vin :"
+                android:textColor="@android:color/darker_gray"
+                android:layout_below="@+id/version_number111"
+                android:layout_alignLeft="@+id/version_number1"
+                android:layout_alignStart="@+id/version_number1" />
+
+            <TextView
+                android:id="@+id/LabelListManagerMarka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="тип"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/version_number111"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/version_num22ber111" />
+
+            <ImageView
+                android:id="@+id/item_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:src="@android:drawable/ic_dialog_info"
+                android:visibility="invisible"
+                android:layout_below="@+id/garaj_Img"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:id="@+id/version_number1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:padding="4dp"
+                android:text="Марка :"
+                android:textColor="@android:color/darker_gray"
+                android:layout_above="@+id/version_number111"
+                android:layout_toStartOf="@+id/type" />
+
+            <ImageView
+                android:id="@+id/Garaj_Oil_logo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+
+            <TextView
+                android:id="@+id/version_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:padding="4dp"
+                android:text="Mercedez Benz"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/Garaj_Oil_logo"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/version_number111" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

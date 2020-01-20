@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/driver_order_pref1"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon1"
+            android:layout_alignRight="@+id/driver_order_icon1"
+            android:layout_alignEnd="@+id/driver_order_icon1"
+            android:layout_alignLeft="@+id/driver_order_icon1"
+            android:layout_alignStart="@+id/driver_order_icon1" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/driver_order_icon1"
+            android:layout_alignParentTop="true" />
+
+
+        <TextView
+            android:id="@+id/driver_order_pref2"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon2"
+            android:layout_alignRight="@+id/driver_order_icon2"
+            android:layout_alignEnd="@+id/driver_order_icon2"
+            android:layout_alignLeft="@+id/driver_order_icon2"
+            android:layout_alignStart="@+id/driver_order_icon2" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/driver_order_icon2"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/driver_order_icon1"
+            android:layout_toEndOf="@+id/driver_order_icon1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+
+        <TextView
+            android:id="@+id/driver_order_pref3"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon3"
+            android:layout_alignRight="@+id/driver_order_icon3"
+            android:layout_alignEnd="@+id/driver_order_icon3"
+            android:layout_alignLeft="@+id/driver_order_icon3"
+            android:layout_alignStart="@+id/driver_order_icon3" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/driver_order_icon3"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/driver_order_icon2"
+            android:layout_toEndOf="@+id/driver_order_icon2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+
+
+        <TextView
+            android:id="@+id/driver_order_pref4"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon4"
+            android:layout_alignRight="@+id/driver_order_icon4"
+            android:layout_alignEnd="@+id/driver_order_icon4"
+            android:layout_alignLeft="@+id/driver_order_icon4"
+            android:layout_alignStart="@+id/driver_order_icon4" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/driver_order_icon4"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/driver_order_icon3"
+            android:layout_toEndOf="@+id/driver_order_icon3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+
+
+        <TextView
+            android:id="@+id/driver_order_pref5"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon5"
+            android:layout_alignRight="@+id/driver_order_icon5"
+            android:layout_alignEnd="@+id/driver_order_icon5"
+            android:layout_alignLeft="@+id/driver_order_icon5"
+            android:layout_alignStart="@+id/driver_order_icon5" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/driver_order_icon5"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/driver_order_icon4"
+            android:layout_toEndOf="@+id/driver_order_icon4"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/driver_order_pref6"
+            android:textSize="10dp"
+            android:text="ALM"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_icon6"
+            android:layout_alignRight="@+id/driver_order_icon6"
+            android:layout_alignEnd="@+id/driver_order_icon6"
+            android:layout_alignLeft="@+id/driver_order_icon6"
+            android:layout_alignStart="@+id/driver_order_icon6" />
+
+        <ImageView
+            android:src="@drawable/no_photo"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/driver_order_icon6"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/driver_order_pref5"
+            android:layout_toEndOf="@+id/driver_order_pref5"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+
+        <TextView
+            android:text="Дата:"
+            android:paddingBottom="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_order_pref1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/driver_order_date1" />
+
+        <TextView
+            android:text="31.07.2018 14:22:44"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/driver_order_date1"
+            android:layout_alignBottom="@+id/driver_order_date1"
+            android:layout_toRightOf="@+id/driver_order_date1"
+            android:layout_toEndOf="@+id/driver_order_date1"
+            android:id="@+id/driver_order_date" />
+
+
+        <TextView
+            android:text="Номер рейса:"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_order_race1"
+            android:layout_below="@+id/driver_order_date1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:text="ALM000000002"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:textStyle="bold"
+            android:paddingRight="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_order_race"
+            android:layout_below="@+id/driver_order_date1"
+            android:layout_toRightOf="@+id/driver_order_race1"
+            android:layout_toEndOf="@+id/driver_order_race1" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

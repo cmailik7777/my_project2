@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <RelativeLayout
+        android:padding="2dp"
+        android:background="@color/gre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp"
+            android:minWidth="420dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:text="Сервис"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/remz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сервис"
+                android:padding="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="200dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/manager1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Менеджер"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp"
+                android:text="Менеджер"
+                android:padding="8dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="10dp"
+                android:text="Телефон"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginLeft="10dp"
+                android:text="Телефон"
+                android:padding="8dp"
+                android:textColor="@android:color/black" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/dato1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="180dp"
+                android:text="Дата открытия"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/dato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="180dp"
+                android:text="Дата открытия"
+                android:padding="8dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/datz1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="180dp"
+                android:text="Дата закрытия"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/datz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginLeft="180dp"
+                android:text="Дата открытия"
+                android:padding="8dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/summa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp"
+                android:text="Сумма"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/summa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:layout_marginLeft="10dp"
+                android:text="Сумма"
+                android:padding="8dp"
+                android:textColor="@android:color/holo_green_dark" />
+
+            <TextView
+                android:id="@+id/statys1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:layout_marginLeft="180dp"
+                android:text="Статус"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/statys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:layout_marginLeft="240dp"
+                android:text="Закрыт"
+                android:padding="8dp"
+                android:textColor="@android:color/holo_red_dark" />
+
+
+            <ImageView
+                android:id="@+id/item_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_secure"
+                android:layout_marginTop="92dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="250dp"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="grey">#d7d7d7</color>
+
+
+    <color name="black">#000000</color>
+
+    <color name="gre">#ececec</color>
+
+    <color name="white">#ffffff</color>
+    <color name="proz">#00ffffff</color>
+    <color name="proza">#70ffffff</color>
+
+    <color name="yellow">#e4e73e</color>
+    <color name="pink">#ffa7f5</color>
+    <color name="green">#fa0000</color>
+
+    <color name="greenListView">#1cc100</color>
+</resources>

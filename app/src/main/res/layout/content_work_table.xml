@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/Manag_Main"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.WorkTable"
+    tools:showIn="@layout/app_bar_work_table">
+
+    <ImageView
+        android:src="@drawable/no_photo"
+        android:layout_width="160dp"
+        android:layout_height="68dp"
+        android:id="@+id/manag_Org_img"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/head"
+        android:id="@+id/imageView9" />
+
+
+    <ListView
+        android:id="@+id/ListView_Manag_Menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/Manag_Choise_Org"
+        android:layout_below="@+id/manag_Org_img"/>
+
+
+
+
+    <TextView
+        android:id="@+id/Manag_Choise_Org"
+        android:text="Выбрать организацию"
+        android:padding="8dp"
+        android:onClick="change"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

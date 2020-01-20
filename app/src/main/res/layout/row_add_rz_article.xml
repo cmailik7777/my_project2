@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:padding="4dp"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/add_rz_article_needS"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/add_rz_article_needI"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="99"
+        android:textColor="@color/black"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_rz_article_count" />
+
+    <TextView
+        android:text="Организация:"
+        android:padding="4dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/add_rz_article_count"
+        android:layout_toEndOf="@+id/add_rz_article_count"
+        android:id="@+id/textView102" />
+
+    <TextView
+        android:id="@+id/add_rz_article_org"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView102"
+        android:padding="4dp"
+        android:text="CAR CITY"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Цена:"
+        android:padding="4dp"
+        android:textColor="@color/greenListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView103"
+        android:layout_below="@+id/textView102"
+        android:layout_toRightOf="@+id/add_rz_article_count"
+        android:layout_toEndOf="@+id/add_rz_article_count" />
+
+    <TextView
+        android:id="@+id/add_rz_article_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView103"
+        android:layout_alignBottom="@+id/textView103"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView103"
+        android:padding="4dp"
+        android:text="20 000"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:text="Количество:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView103"
+        android:layout_alignLeft="@+id/textView103"
+        android:layout_alignStart="@+id/textView103"
+        android:id="@+id/textView104" />
+
+    <TextView
+        android:id="@+id/add_rz_article_col"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView104"
+        android:layout_alignBottom="@+id/textView104"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView104"
+        android:padding="4dp"
+        android:text="20 000"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:text="Номенклатура:"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView104"
+        android:layout_alignLeft="@+id/textView104"
+        android:layout_alignStart="@+id/textView104"
+        android:id="@+id/textView105" />
+
+
+    <TextView
+        android:id="@+id/add_rz_article_nomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView105"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textView105"
+        android:layout_below="@+id/textView105"
+        android:padding="4dp"
+        android:text="20 000"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>

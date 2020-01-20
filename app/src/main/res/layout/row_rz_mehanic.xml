@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:background="@color/white" android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:text="Ремонтны заказы"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:id="@+id/listview_rz_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Приемщик:"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView118"
+        android:layout_below="@+id/listview_rz_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Номер р/з:"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView118"
+        android:layout_alignLeft="@+id/textView118"
+        android:layout_alignStart="@+id/textView118"
+        android:id="@+id/textView119" />
+
+    <TextView
+        android:text="Дата:"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView119"
+        android:layout_alignLeft="@+id/textView119"
+        android:layout_alignStart="@+id/textView119"
+        android:id="@+id/textView120" />
+
+    <TextView
+        android:text="Гос. номер:"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView120"
+        android:layout_alignLeft="@+id/textView120"
+        android:layout_alignStart="@+id/textView120"
+        android:id="@+id/textView121" />
+
+
+    <TextView
+
+        android:id="@+id/listview_rz_manag"
+        android:text="Караев"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView118"
+        android:layout_alignBottom="@+id/textView118"
+        android:layout_toRightOf="@+id/textView118"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+
+        android:id="@+id/listview_rz_num"
+        android:text="ALM00808080"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView119"
+        android:layout_alignBottom="@+id/textView119"
+        android:layout_toRightOf="@+id/textView119"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:id="@+id/listview_rz_data"
+        android:text="21,21,2000"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView120"
+        android:layout_alignBottom="@+id/textView120"
+        android:layout_toRightOf="@+id/textView120"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:id="@+id/listview_rz_gos"
+        android:text="442lfa02"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView121"
+        android:layout_alignBottom="@+id/textView121"
+        android:layout_toRightOf="@+id/textView121"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

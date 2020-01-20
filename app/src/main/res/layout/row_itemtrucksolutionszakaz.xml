@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/truckOO1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView23"
+        android:padding="8dp"
+        android:text="Организация"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckOO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="оо"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckOO1"
+        android:layout_alignLeft="@+id/truckOO1"
+        android:layout_alignStart="@+id/truckOO1" />
+
+    <TextView
+        android:id="@+id/truckOG1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckOO"
+        android:layout_alignStart="@+id/truckOO"
+        android:layout_below="@+id/truckOO"
+        android:padding="8dp"
+        android:text="Город"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="ог"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckOG1"
+        android:layout_alignLeft="@+id/truckOG1"
+        android:layout_alignStart="@+id/truckOG1" />
+
+    <TextView
+        android:id="@+id/truckOA1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckOL"
+        android:layout_alignStart="@+id/truckOL"
+        android:layout_below="@+id/truckOL"
+        android:padding="8dp"
+        android:text="Адрес"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckOA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="оа"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckOA1"
+        android:layout_alignLeft="@+id/truckOA1"
+        android:layout_alignStart="@+id/truckOA1" />
+
+    <TextView
+        android:id="@+id/truckOL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView23"
+        android:padding="8dp"
+        android:text="Контактное лицо"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckOL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckOL1"
+        android:layout_alignStart="@+id/truckOL1"
+        android:layout_below="@+id/truckOL1"
+        android:padding="8dp"
+        android:text="ол"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/truckPO1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckPO"
+        android:layout_alignStart="@+id/truckPO"
+        android:layout_below="@+id/textView24"
+        android:padding="8dp"
+        android:text="Организация"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="по"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckPO1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/truckPG1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckPO"
+        android:layout_alignStart="@+id/truckPO"
+        android:layout_below="@+id/truckPO"
+        android:padding="8dp"
+        android:text="Город"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckPG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="пг"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckPG1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/truckPA1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/truckPL"
+        android:layout_alignStart="@+id/truckPL"
+        android:layout_below="@+id/truckPL"
+        android:padding="8dp"
+        android:text="Адрес"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="па"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckPA1"
+        android:layout_alignLeft="@+id/truckPL"
+        android:layout_alignStart="@+id/truckPL" />
+
+    <TextView
+        android:id="@+id/truckPL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView24"
+        android:padding="8dp"
+        android:text="Контактное лицо"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/truckPL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="пл"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/truckPL1"
+        android:layout_alignLeft="@+id/truckPL1"
+        android:layout_alignStart="@+id/truckPL1" />
+
+
+    <ImageView
+        android:id="@+id/item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView23"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_dialog_info"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Отправитель"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView23"
+        android:layout_alignStart="@+id/textView23"
+        android:layout_below="@+id/truckOA"
+        android:layout_marginTop="37dp"
+        android:text="Получатель"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
+

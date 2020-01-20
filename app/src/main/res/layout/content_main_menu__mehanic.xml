@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:padding="8dp"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.main_menu_Mehanic"
+    tools:showIn="@layout/activity_main_menu__mehanic">
+
+    <RelativeLayout
+        android:background="@color/gre"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout9">
+
+        <RelativeLayout
+            android:padding="4dp"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Дата Р/З:"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView126" />
+
+            <TextView
+                android:id="@+id/main_menu_data"
+                android:text=""
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView126"
+                android:layout_toEndOf="@+id/textView126" />
+
+            <TextView
+                android:text="Приемщик:"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView127"
+                android:layout_below="@+id/textView126"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/main_menu_manag"
+                android:text=""
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView127"
+                android:layout_alignBottom="@+id/textView127"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView127"
+                android:layout_toRightOf="@+id/textView127" />
+
+            <TextView
+                android:text="Гос. номер:"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView128"
+                android:layout_alignBaseline="@+id/main_menu_gos"
+                android:layout_alignBottom="@+id/main_menu_gos"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/main_menu_gos"
+                android:text=""
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_menu_manag"
+                android:layout_toRightOf="@+id/textView128"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Модель/VIN:"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView128"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView129" />
+
+            <TextView
+                android:id="@+id/main_menu_vin"
+                android:text=""
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView129"
+                android:layout_alignBottom="@+id/textView129"
+                android:layout_toRightOf="@+id/textView129"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/txt321"
+        android:text="Выберите меню"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout9"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/main_menu_my_rab_btn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Рабочие операции выполняемые мною"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt321"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/main_menu_brig_rab_btn"
+        android:text="Рабочие операции выполняемые моей бригадой"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_menu_my_rab_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:id="@+id/main_menu_zap_btn"
+
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Запчасти на ремонтном заказе"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_menu_brig_rab_btn"
+        android:layout_alignLeft="@+id/main_menu_brig_rab_btn"
+        android:layout_alignStart="@+id/main_menu_brig_rab_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txt3200"
+        android:text="Поиск по критериям"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_menu_zap_btn"
+        android:layout_alignLeft="@+id/main_menu_zap_btn"
+        android:layout_alignStart="@+id/main_menu_zap_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textInputLayout21"
+        android:layout_below="@+id/txt3200"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <EditText
+            android:id="@+id/main_menu_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Поиск по названию"
+            android:maxLines="1"
+            android:layout_marginTop="114dp"
+            android:layout_alignParentTop="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/main_menu_search_btn"
+        android:text="Поиск"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textInputLayout21"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

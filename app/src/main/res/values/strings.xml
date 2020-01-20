@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">MyAuto</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="reg_i">Имя<font color="#FF0000">*</font></string>
+    <string name="reg_f">Фамилия<font color="#FF0000">*</font></string>
+
+    <string name="reg_mob">+7 (•••) ••• ••••<font color="#FF0000"> *</font></string>
+
+    <string name="check_toast">Position %1$d : %2$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_login">Логин</string>
+    <string name="title_activity_garaj">Мой гараж</string>
+    <string name="title_activity_gos">Gos</string>
+    <string name="title_activity_tovar">Tovar</string>
+    <string name="title_activity_pokypki">Мои покупки</string>
+    <string name="title_activity_mmrpit">Типография MMPrint</string>
+    <string name="title_activity_silkworm">Швейный цех Silkworm</string>
+    <string name="title_activity_trucksolutions">Грузоперевозки TruckSolutions</string>
+    <string name="title_activity_profile2">Profile2</string>
+    <string name="title_activity_about1">About1</string>
+    <string name="title_activity_adminka">Adminka</string>
+    <string name="title_activity_lenta">Lenta</string>
+    <string name="title_activity_setting_profile">Настройки</string>
+    <string name="rekTitle1">КОМПЛЕКСНЫЙ СЕРВИС</string>
+    <string name="rekText1">Миссия автоцентра MEGA MOTORS – обеспечить бескомпромиссно высокое качество сервисного обслуживания. Каждого нашего клиента ждет индивидуальный подход независимо от сложности его проблемы. Обратившись в наш автосервис в Алматы, вы получите свой автомобиль таким же надежным, эффективным и сияющим чистотой – таким он был только на заводском конвейере! Мы ценим ваше время и дорожим своей репутацией, поэтому в MEGA MOTORS обслуживание и ремонт автомобилей в Алматы и Астане осуществляется быстро и с гарантией качества.</string>
+    <string name="rekTitle2">ДИАГНОСТИКА</string>
+    <string name="rekText2">В автоцентре MEGA MOTORS осуществляется диагностика автомобилей в Алматы с помощью современного оборудования. Все виды работ производят квалифицированные специалисты, способные выявить даже скрытые дефекты. Компьютерная диагностика автомобиля обязательно дополняется тщательным визуальным осмотром. На основании результатов даются рекомендации по их устранению, составляется перечень необходимых для ремонта запасных частей. Своевременная диагностика не позволит незначительной неисправности перерасти в серьезную проблему. Поэтому мы рекомендуем владельцам Audi, BMW, Porsсhe, Volkswagen и других европейских автомобилей регулярно производить плановую диагностику.</string>
+    <string name="rekTitle3">КУЗОВНОЙ РЕМОНТ</string>
+    <string name="rekText3">Автоцентр MEGA MOTORS осуществляет кузовной ремонт автомобилей любых марок. Все восстановительные мероприятия производятся с применением современного оборудования, качественных лакокрасочных и шпаклевочных материалов. Кузовной ремонт – трудоемкий процесс, требующий большого мастерства, опыта и профессионального оборудования. Данная процедура начинается с тщательного осмотра повреждений (дефектовки), по результатам которой производится калькуляция стоимости и разрабатывается план дальнейших работ. Автоцентр может предложить полный комплекс услуг по кузовным работам от локального ремонта до полной реконструкции геометрии кузова и качественной покраски автомобиля.</string>
+    <string name="rekTitle4">РЕМОНТ МЕХАНИЧЕСКИХ ЧАСТЕЙ</string>
+    <string name="rekText4">Автоцентр MEGA MOTORS осуществляет кузовной ремонт автомобилей любых марок. Все восстановительные мероприятия производятся с применением современного оборудования, качественных лакокрасочных и шпаклевочных материалов. Кузовной ремонт – трудоемкий процесс, требующий большого мастерства, опыта и профессионального оборудования. Данная процедура начинается с тщательного осмотра повреждений (дефектовки), по результатам которой производится калькуляция стоимости и разрабатывается план дальнейших работ. Автоцентр может предложить полный комплекс услуг по кузовным работам от локального ремонта до полной реконструкции геометрии кузова и качественной покраски автомобиля.</string>
+    <string name="title_activity_push">Уведомления</string>
+    <string name="title_activity_lables">Заметки</string>
+    <string name="title_activity_manager">Manager</string>
+    <string name="title_activity_manag">Manag</string>
+    <string name="title_activity_otkit_remz">OtkitRemz</string>
+    <string name="title_activity_list_rem_z">ListRemZ</string>
+    <string name="title_activity_final_list_rem_z">FinalListRemZ</string>
+    <string name="title_activity_detail_remz">DetailRemz</string>
+    <string name="title_activity_lables_list">Заметки</string>
+    <string name="title_activity_label_list_manag">LabelListManag</string>
+    <string name="title_activity_lables_list_detail">LablesListDetail</string>
+    <string name="title_activity_test">TEST</string>
+    <string name="title_activity_camera">Camera</string>
+    <string name="title_activity_show_camera">ShowCamera</string>
+    <string name="title_activity_show_camera_search_rem_z">ShowCameraSearchRemZ</string>
+    <string name="title_activity_see_ad">SeeAd</string>
+    <string name="title_activity_invite_new_user">Пригласить друзей</string>
+    <string name="title_activity_wheels">Хранение шин</string>
+    <string name="title_activity_info">О программе</string>
+    <string name="title_activity_service">Наш сервис</string>
+    <string name="title_activity_qrcode">QRCode</string>
+    <string name="title_activity_market">Торговая площадка</string>
+    <string name="title_activity_detail_ad">detailAd</string>
+    <string name="title_activity_my_service">Ваш сервис</string>
+    <string name="title_activity_my_ad">Реализация з\\ч</string>
+    <string name="title_activity_myad_add">Добавить объявление</string>
+    <string name="title_activity_registration">Регистрация</string>
+    <string name="title_activity_home">Главная</string>
+    <string name="title_activity_work_table">WorkTable</string>
+    <string name="title_activity_dr_beginning">drBeginning</string>
+    <string name="title_activity_dr_end_beginning">Окончание смены</string>
+    <string name="title_activity_drivers">Drivers</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_order_detail">OrderDetail</string>
+    <string name="title_activity_rab_oper">Рабочие операции</string>
+    <string name="title_activity_sozdat_rab_oper">Создание раб. операции</string>
+    <string name="title_activity_detail_sozdat_rab_oper">Рабочая операция</string>
+    <string name="title_activity_rz_article">Запчасти</string>
+    <string name="title_activity_addrz_article">Добавить запчасть</string>
+    <string name="title_activity_addrz_selected_article">Выбранная запчасть</string>
+    <string name="title_activity_sotr_info">Сотрудник компании</string>
+    <string name="title_activity_sotr_info_zp">Сведения о з\\п</string>
+    <string name="title_activity_detail_news">1</string>
+    <string name="title_activity_rz_mehanic">Ремонтные заказы</string>
+    <string name="title_activity_rz_mehanic_detail">rzMehanic_detail</string>
+    <string name="title_activity_show__cam__mehanic">фото механика</string>
+    <string name="title_activity_choice_brig">choiceBrig</string>
+    <string name="title_activity_main_menu__mehanic">main_menu_Mehanic</string>
+    <string name="title_activity_mehanic_my_rab">mehanic_my_rab</string>
+    <string name="title_activity_mehanic_brig_rab">mehanic_brig_rab</string>
+    <string name="title_activity_mehanic_zap_num">mehanic_zap_num</string>
+    <string name="title_activity_mehanic_find_rab">mehanic_find_rab</string>
+    <string name="title_activity_new_news">newNews</string>
+    <string name="title_activity_invent">Invent</string>
+</resources>

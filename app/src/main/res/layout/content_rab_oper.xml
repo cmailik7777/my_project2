@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.rab_oper"
+    tools:showIn="@layout/activity_rab_oper">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:padding="8dp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout5">
+
+        <TextView
+            android:text="Общее количество работ:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rab_oper_count_all2222"
+            android:textStyle="italic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="10"
+            android:padding="4dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:id="@+id/rab_oper_count_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/rab_oper_count_all2222"
+            android:layout_alignBottom="@+id/rab_oper_count_all2222"
+            android:layout_toRightOf="@+id/rab_oper_count_all2222"
+            android:layout_toEndOf="@+id/rab_oper_count_all2222" />
+
+
+        <ImageView
+            android:src="@drawable/if_info_large_216254"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/rab_oper_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout5">
+
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/rab_oper_ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/rab_oper_ifLabel"
+        android:text="Данные о р\з отсутсвуют..."
+        android:layout_centerInParent="true"
+        android:padding="8dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.myad_add"
+    tools:showIn="@layout/activity_myad_add">
+
+
+    <RelativeLayout
+        android:background="@color/gre"
+        android:padding="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Заголовок"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView71"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/editText3" />
+
+            <EditText
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText3"
+                android:layout_above="@+id/textView73"
+                android:layout_alignStart="@+id/textView73" />
+
+
+            <TextView
+                android:text="Описание"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView72"
+                android:layout_below="@+id/editText8"
+                android:layout_alignStart="@+id/editText4" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:layout_below="@+id/textView72"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="82dp" />
+
+
+
+            <TextView
+                android:text="Цена"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView73"
+                android:layout_above="@+id/editText5"
+                android:layout_alignStart="@+id/editText5" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText5"
+                android:layout_above="@+id/textView76"
+                android:layout_alignStart="@+id/textView76" />
+
+
+            <TextView
+                android:text="Бренд"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView75"
+                android:layout_below="@+id/editText3"
+                android:layout_alignStart="@+id/editText6" />
+
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText6"
+                android:layout_alignBaseline="@+id/editText5"
+                android:layout_alignBottom="@+id/editText5"
+                android:layout_alignEnd="@+id/editText7"
+                android:layout_toEndOf="@+id/editText5" />
+
+
+            <TextView
+                android:text="Артикул"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView76"
+                android:layout_above="@+id/editText7"
+                android:layout_alignStart="@+id/editText7" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText7"
+                android:layout_above="@+id/textView74"
+                android:layout_alignStart="@+id/textView74" />
+
+            <TextView
+                android:text="Город"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView74"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/editText8" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText8"
+                android:layout_below="@+id/textView74"
+                android:layout_alignStart="@+id/textView72" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:text="Добавить фотографии"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText4"
+                android:layout_alignStart="@+id/editText4"
+                android:id="@+id/textView77" />
+
+            <ImageView
+                android:id="@+id/myAd_Add_pic1"
+                android:src="@drawable/no_photo"
+                android:onClick="Pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView77"
+                android:layout_alignStart="@+id/textView77" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

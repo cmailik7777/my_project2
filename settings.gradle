@@ -1,0 +1,1 @@
+include ':app', ':material-spinner-1.2.5', ':material-spinner-1.1.1', ':firebase-jobdispatcher-0.5.0'

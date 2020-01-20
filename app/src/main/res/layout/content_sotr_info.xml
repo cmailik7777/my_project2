@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.SotrInfo"
+    tools:showIn="@layout/activity_sotr_info">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:text="Организация:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView110" />
+
+        <TextView
+            android:text=""
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sotr_info_org"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView110"
+            android:layout_toEndOf="@+id/textView110" />
+
+        <TextView
+            android:text="Подразделение:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView111"
+            android:layout_below="@+id/textView110"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:text=""
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sotr_info_podraz"
+            android:layout_alignBaseline="@+id/textView111"
+            android:layout_alignBottom="@+id/textView111"
+            android:layout_toRightOf="@+id/textView111"
+            android:layout_toEndOf="@+id/textView111" />
+
+        <TextView
+            android:text="Табельный номер:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView111"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView112" />
+
+
+        <TextView
+            android:text=""
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sotr_info_sotrcode"
+            android:layout_alignBaseline="@+id/textView112"
+            android:layout_alignBottom="@+id/textView112"
+            android:layout_toRightOf="@+id/textView112"
+            android:layout_toEndOf="@+id/textView112" />
+
+        <TextView
+            android:text="Должность:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView112"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView113" />
+
+        <TextView
+            android:text=""
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/sotr_info_dolj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView113"
+            android:layout_alignBottom="@+id/textView113"
+            android:layout_toRightOf="@+id/textView113"
+            android:layout_toEndOf="@+id/textView113" />
+
+        <TextView
+            android:text="Бригада:"
+            android:padding="4dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView113"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/sotr_info_brigLABEL" />
+
+        <TextView
+            android:text=""
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:visibility="invisible"
+            android:id="@+id/sotr_info_brig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sotr_info_brigLABEL"
+            android:layout_alignBottom="@+id/sotr_info_brigLABEL"
+            android:layout_toRightOf="@+id/sotr_info_brigLABEL"
+            android:layout_toEndOf="@+id/sotr_info_brigLABEL" />
+
+        <TextView
+            android:text="Процент:"
+            android:padding="4dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sotr_info_brigLABEL"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/sotr_info_procLABEL" />
+
+        <TextView
+            android:text=""
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:visibility="invisible"
+            android:id="@+id/sotr_info_proc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sotr_info_procLABEL"
+            android:layout_alignBottom="@+id/sotr_info_procLABEL"
+            android:layout_toRightOf="@+id/sotr_info_procLABEL"
+            android:layout_toEndOf="@+id/sotr_info_procLABEL" />
+
+
+        <Button
+            android:id="@+id/sotr_info_zp"
+            android:textColor="#000"
+            android:background="@color/white"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Сведения о зарплате"
+            android:textSize="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/sotr_info_procLABEL"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>

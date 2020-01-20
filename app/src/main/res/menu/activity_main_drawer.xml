@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Главная" />
+        <item
+            android:id="@+id/nav_garaj"
+            android:icon="@drawable/ic_image2vector"
+            android:title="Ваш гараж" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/if_wrench_383193"
+            android:title="Ваш сервис" />
+        <item
+            android:id="@+id/nav_push"
+            android:icon="@drawable/ic_content_paste_black_24dp"
+            android:title="Уведомления" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/if_user_male_172625"
+            android:title="Личный кабинет" />
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/if_comments_1737374"
+            android:title="Торговая площадка" />
+        <item
+            android:id="@+id/nav_manager"
+            android:icon="@drawable/tie_glyph_763503"
+            android:visible="false"
+            android:title="Рабочий стол" />
+        <item
+            android:id="@+id/nav_prog"
+            android:icon="@drawable/if_info_large_216254"
+            android:title="О программе" />
+    </group>
+
+
+</menu>

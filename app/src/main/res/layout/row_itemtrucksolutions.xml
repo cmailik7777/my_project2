@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/servicetruck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Сервис"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/servicetruck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сервис"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/servicetruck1"
+            android:layout_toEndOf="@+id/servicetruck1" />
+
+        <TextView
+            android:id="@+id/nzaktruck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Номер заказа"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignBaseline="@+id/nzaktruck"
+            android:layout_alignBottom="@+id/nzaktruck"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/nzaktruck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вид продукции"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/servicetruck"
+            android:layout_toRightOf="@+id/nzaktruck1"
+            android:layout_toEndOf="@+id/nzaktruck1" />
+
+        <TextView
+            android:id="@+id/ves1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Вес"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@+id/nzaktruck1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/ves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ves1"
+            android:padding="4dp"
+            android:text="208"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/obem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Объем"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@+id/nzaktruck1"
+            android:layout_toRightOf="@+id/servicetruck1"
+            android:layout_toEndOf="@+id/servicetruck1" />
+
+        <TextView
+            android:id="@+id/obem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="0.3"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/summatruck1"
+            android:layout_alignLeft="@+id/obem1"
+            android:layout_alignStart="@+id/obem1" />
+
+        <TextView
+            android:id="@+id/mest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Количество мест"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp"
+            android:layout_below="@+id/nzaktruck"
+            android:layout_toLeftOf="@+id/summatruck1"
+            android:layout_toStartOf="@+id/summatruck1" />
+
+        <TextView
+            android:id="@+id/mest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="7"
+            android:textColor="@color/black"
+            android:layout_below="@+id/mest1"
+            android:layout_toRightOf="@+id/nzaktruck"
+            android:layout_toEndOf="@+id/nzaktruck" />
+
+        <TextView
+            android:id="@+id/summatruck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Итого"
+            android:textColor="@color/black"
+            android:layout_alignBaseline="@+id/mest1"
+            android:layout_alignBottom="@+id/mest1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/summatruck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/summatruck1"
+            android:padding="4dp"
+            android:textSize="20dp"
+            android:text="7 080"
+            android:textColor="@android:color/holo_green_dark" />
+
+
+
+
+        <ImageView
+            android:id="@+id/item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:layout_alignTop="@+id/nzaktruck"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+

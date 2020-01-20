@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="6dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="2dp"
+        android:background="@color/gre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dr_beginning_pic"
+                android:src="@drawable/no_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/dr_beginning_color2" />
+
+            <TextView
+                android:id="@+id/dr_beginning_marka2"
+                android:text="Марка"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/dr_beginning_pic"
+                android:layout_toEndOf="@+id/dr_beginning_pic" />
+
+            <TextView
+                android:id="@+id/dr_beginning_marka"
+                android:text="Mitshubisi"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/dr_beginning_marka2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+            <TextView
+                android:id="@+id/dr_beginning_gos2"
+                android:text="Гос. номер"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dr_beginning_marka"
+                android:layout_toRightOf="@+id/dr_beginning_pic"
+                android:layout_toEndOf="@+id/dr_beginning_pic" />
+
+            <TextView
+                android:id="@+id/dr_beginning_gos"
+                android:text="602DNA02"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dr_beginning_gos2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/dr_beginning_gos2" />
+
+            <TextView
+                android:id="@+id/dr_beginning_model2"
+                android:text="Модель"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dr_beginning_gos"
+                android:layout_toRightOf="@+id/dr_beginning_pic"
+                android:layout_toEndOf="@+id/dr_beginning_pic" />
+
+            <TextView
+                android:id="@+id/dr_beginning_model"
+                android:text="DESLISDK@@#"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dr_beginning_model2"
+                android:layout_alignBottom="@+id/dr_beginning_model2"
+                android:layout_toRightOf="@+id/dr_beginning_model2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/dr_beginning_color2"
+                android:text="Цвет"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dr_beginning_model"
+                android:layout_toRightOf="@+id/dr_beginning_pic"
+                android:layout_toEndOf="@+id/dr_beginning_pic" />
+
+            <TextView
+                android:id="@+id/dr_beginning_color"
+                android:text="Красный"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dr_beginning_color2"
+                android:layout_alignBottom="@+id/dr_beginning_color2"
+                android:layout_toRightOf="@+id/dr_beginning_color2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/dr_beginning_id"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

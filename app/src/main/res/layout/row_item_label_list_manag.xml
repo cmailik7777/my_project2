@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/LabelListManagerMarka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/LabelListManagerNZ"
+        android:text="марка"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/LabelListManagerGos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/LabelListManagerMarka"
+        android:text="гос номер"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/LabelListManagerDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/LabelListManagerGos"
+        android:text="Описание"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/LabelListManagerClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/LabelListManagerTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Телефон"
+        android:textColor="@android:color/black"
+        tools:ignore="HardcodedText"
+        android:layout_below="@+id/LabelListManagerClient"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/LabelListManagerNZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/LabelListManagerTel"
+        android:text="номер заявки"
+        android:textColor="@android:color/black" />
+
+
+</RelativeLayout>
+

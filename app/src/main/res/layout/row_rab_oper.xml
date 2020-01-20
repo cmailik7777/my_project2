@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="4dp"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rab_oper_count"
+            android:text="99"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Бригада:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView44"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/rab_oper_count"
+            android:layout_toEndOf="@+id/rab_oper_count" />
+
+        <TextView
+            android:text="A0878"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/rab_oper_brigada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView44"
+            android:layout_toEndOf="@+id/textView44" />
+
+        <TextView
+            android:text="Ответственный:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView45"
+            android:layout_below="@+id/textView44"
+            android:layout_alignLeft="@+id/textView44"
+            android:layout_alignStart="@+id/textView44" />
+
+        <TextView
+            android:text="Никитин Дмитрий"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/rab_oper_otvet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView45"
+            android:layout_alignBottom="@+id/textView45"
+            android:layout_toRightOf="@+id/textView45"
+            android:layout_toEndOf="@+id/textView45" />
+
+
+        <TextView
+            android:text="Категория ремонта:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView46"
+            android:layout_below="@+id/textView45"
+            android:layout_alignLeft="@+id/textView45"
+            android:layout_alignStart="@+id/textView45" />
+
+        <TextView
+            android:text="Малярные работы"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/rab_oper_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView46"
+            android:layout_alignBottom="@+id/textView46"
+            android:layout_toRightOf="@+id/textView46"
+            android:layout_toEndOf="@+id/textView46" />
+
+
+        <TextView
+            android:text="Стоимость:"
+            android:padding="4dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/greenListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/textView47"
+            android:layout_below="@+id/textView46"
+            android:layout_alignLeft="@+id/textView46"
+            android:layout_alignStart="@+id/textView46" />
+
+        <TextView
+            android:text="687 000"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/rab_oper_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView47"
+            android:layout_alignBottom="@+id/textView47"
+            android:layout_toRightOf="@+id/textView47"
+            android:layout_toEndOf="@+id/textView47" />
+
+
+        <TextView
+            android:text="Рабочая операция:"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView83"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView47"
+            android:layout_alignLeft="@+id/textView47"
+            android:layout_alignStart="@+id/textView47" />
+
+        <TextView
+            android:text="Было сделано то и тому и так и вот так и по всякому было сделана работа"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:id="@+id/rab_oper_oper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView83"
+            android:layout_alignStart="@+id/textView83"
+            android:layout_below="@+id/textView83" />
+
+        <TextView
+            android:id="@+id/rab_oper_date"
+            android:text="18.09.2019 00.00.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

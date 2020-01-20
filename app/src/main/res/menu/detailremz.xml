@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/menu_create_remz"
+            android:title="Создать рем. заказ на основании этого" />
+        <item
+            android:id="@+id/menu_rab_remz"
+            android:title="Рабочие операции" />
+        <item
+            android:id="@+id/menu_product_remz"
+            android:title="Запчасти" />
+
+
+
+    </group>
+
+</menu>

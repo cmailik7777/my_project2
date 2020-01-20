@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "573152694733",
+    "firebase_url": "https://myauto-ee273.firebaseio.com",
+    "project_id": "myauto-ee273",
+    "storage_bucket": "myauto-ee273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573152694733:android:83e708ae979bb6a9",
+        "android_client_info": {
+          "package_name": "com.myauto.designer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573152694733-45oqtscvpebbjmba9l82pmua61qhpteo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAke7jV_A4pdXqU3rvMfxINhdn2DLoBtgE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

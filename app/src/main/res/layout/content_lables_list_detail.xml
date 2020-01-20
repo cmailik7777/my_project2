@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.designer.com.myauto.designer2.LablesListDetail"
+    tools:showIn="@layout/activity_lables_list_detail">
+
+    <ListView
+        android:id="@+id/listLabelListDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reee" />
+
+    <RelativeLayout
+        android:id="@+id/reee"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/button10"
+            android:background="@drawable/round_edittext"
+            android:ems="10"
+            android:hint="Введите сообщение..."
+            android:inputType="textAutoCorrect|textAutoComplete|textMultiLine|textPersonName"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_chevron_right_black_24dp"
+            android:onClick="AnsAsk" />
+
+    </RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/LoadingLabelListDetail"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

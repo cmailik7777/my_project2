@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp">
+
+    //{"wheels":[{"date":"10.04.2018", "gos":"602DNA02", "description":"Р—РёєР°", "brand":"Yokohama", "size":"215/60/R16", "count":"4", "count_month":"2", "sum":"1В 000"} ]}
+
+    <TextView
+        android:id="@+id/Wheels_Date"
+        android:text="12.12.2012"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/Wheels_Brand"
+        android:text="Yokohama"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Гос. номер"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Wheels_Brand"
+            android:id="@+id/textView50" />
+
+    <TextView
+        android:id="@+id/Wheels_Gos"
+        android:text="602DNA02"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView50"
+        android:layout_alignBottom="@+id/textView50"
+        android:layout_toEndOf="@+id/textView50" />
+
+        <TextView
+            android:text="Размер"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView50"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView51" />
+
+    <TextView
+        android:id="@+id/Wheels_Size"
+        android:text="215/60/R16"
+
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView51"
+        android:layout_alignBottom="@+id/textView51"
+        android:layout_toEndOf="@+id/textView51" />
+
+        <TextView
+            android:text="Количество шин"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView51"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView52" />
+
+    <TextView
+        android:id="@+id/Wheels_Count"
+        android:text="4"
+        android:padding="8dp"
+
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Wheels_Size"
+        android:layout_toEndOf="@+id/textView52" />
+
+        <TextView
+            android:text="Количество месяцев"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView52"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView53" />
+
+    <TextView
+        android:id="@+id/Wheels_Count_Mounth"
+        android:text="6"
+        android:padding="8dp"
+
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView53"
+        android:layout_alignBottom="@+id/textView53"
+        android:layout_toEndOf="@+id/textView53" />
+
+        <TextView
+            android:text="Сумма"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView53"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView54" />
+
+    <TextView
+        android:id="@+id/Wheels_Summa"
+        android:text="130 000"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView54"
+        android:layout_alignBottom="@+id/textView54"
+        android:layout_toEndOf="@+id/textView54" />
+
+
+    <TextView
+        android:id="@+id/Wheels_Desc"
+        android:text="зимные шины без покрышки"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView54"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

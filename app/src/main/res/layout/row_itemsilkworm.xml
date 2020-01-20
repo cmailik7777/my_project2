@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Итого"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/datzSilk"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/nzakSilk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Номер заказа"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/nzakSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер заказа"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/nzakSilk1"
+            android:layout_alignLeft="@+id/nzakSilk1"
+            android:layout_alignStart="@+id/nzakSilk1" />
+
+        <TextView
+            android:id="@+id/vidprodSilk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Вид продукции"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@+id/nzakSilk"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/vidprodSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вид продукции"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/vidprodSilk1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/cenaSilk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Цена за 1шт."
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@+id/vidprodSilk"
+            android:layout_alignLeft="@+id/kolichestvoSilk1"
+            android:layout_alignStart="@+id/kolichestvoSilk1" />
+        <TextView
+            android:id="@+id/cenaSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.2"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_alignBaseline="@+id/cenaSilk1"
+            android:layout_alignBottom="@+id/cenaSilk1"
+            android:layout_toRightOf="@+id/cenaSilk1"
+            android:layout_toEndOf="@+id/cenaSilk1" />
+
+        <TextView
+            android:id="@+id/kolichestvoSilk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Количество"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="67dp"
+            android:layout_marginStart="67dp"
+            android:layout_below="@+id/cenaSilk1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/kolichestvoSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_alignBaseline="@+id/kolichestvoSilk1"
+            android:layout_alignBottom="@+id/kolichestvoSilk1"
+            android:layout_toRightOf="@+id/kolichestvoSilk1"
+            android:layout_toEndOf="@+id/kolichestvoSilk1" />
+
+        <TextView
+            android:id="@+id/summaSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="20dp"
+            android:text="Сумма"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_alignBottom="@+id/kolichestvoSilk"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/datoSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Дата открытия"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/datoSilkprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16.08.2017 10:35:26"
+            android:maxWidth="300dp"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/datoSilk"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/datzSilk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Дата закрытия"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@+id/datoSilkprint"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/datzSilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16.08.2017 10:35:26"
+            android:maxWidth="300dp"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/datzSilk1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <ImageView
+            android:id="@+id/item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:layout_below="@+id/vidprodSilk"
+            android:layout_toLeftOf="@+id/cenaSilk1"
+            android:layout_toStartOf="@+id/cenaSilk1" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

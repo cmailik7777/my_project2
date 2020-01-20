@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myauto.designer.Profile2"
+    tools:showIn="@layout/activity_profile2">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/lkPhoto"
+        android:src="@drawable/no_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/lkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Никитин Дмитрий"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_below="@+id/lkPhoto"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/lkPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="+7 7777 777 777"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_below="@+id/lkName"
+        android:layout_alignLeft="@+id/lkName"
+        android:layout_alignStart="@+id/lkName"
+        android:layout_alignRight="@+id/lkName"
+        android:layout_alignEnd="@+id/lkName" />
+
+    <TextView
+        android:id="@+id/lkModerator"
+        android:text="Модератор"
+        android:padding="8dp"
+        android:textColor="#ffb300"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lkPhone"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_toStartOf="@+id/textView8"
+        android:src="@drawable/percent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lkPhoto"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/textView21"
+        android:padding="2dp"
+        android:text="Ваша скидка"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/textView9"
+        android:layout_toStartOf="@+id/textView9"
+        android:src="@drawable/tag"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="11dp"
+        android:padding="2dp"
+        android:text="Ваш бонус"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_marginStart="44dp"
+        android:layout_toEndOf="@+id/lkPhoto"
+        android:padding="2dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignStart="@+id/textView13"
+        android:padding="2dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_share_black_24dp"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/lkInvite_User"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/lkInvite_User"
+        android:text="Пригласить друзей"
+        android:padding="2dp"
+        android:onClick="InviteNewUser"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lkPhone"
+        android:layout_marginTop="36dp"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/wheels"
+        android:id="@+id/imageView16"
+        android:layout_alignBottom="@+id/wheels"
+        android:layout_toLeftOf="@+id/wheels"
+        android:layout_toStartOf="@+id/wheels" />
+
+    <TextView
+        android:id="@+id/wheels"
+        android:text="Хранение шин"
+        android:padding="2dp"
+        android:onClick="Wheels"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lkInvite_User"
+        android:layout_alignLeft="@+id/lkInvite_User"
+        android:layout_alignStart="@+id/lkInvite_User"
+        android:layout_marginTop="19dp"
+        android:layout_alignRight="@+id/lkInvite_User"
+        android:layout_alignEnd="@+id/lkInvite_User" />
+
+
+    <ImageView
+        android:src="@drawable/zap"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/lkZapchasti"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView18" />
+
+    <TextView
+        android:id="@+id/lkZapchasti"
+        android:text="Реализация запасных частей"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:onClick="Zapchasti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wheels"
+        android:layout_toRightOf="@+id/imageView16"
+        android:layout_marginTop="16dp"
+        android:layout_alignRight="@+id/wheels"
+        android:layout_alignEnd="@+id/wheels" />
+
+
+    <ImageView
+        android:src="@drawable/document_add"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView19"
+        android:layout_alignBottom="@+id/lknewNews"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/lknewNews"
+        android:text="Добавить новость"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:layout_marginTop="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView18"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/imageView19"
+        android:layout_toEndOf="@+id/imageView19" />
+
+    <ImageView
+        android:src="@drawable/exit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/lkExit" />
+
+    <TextView
+        android:id="@+id/lkExit"
+        android:padding="2dp"
+        android:onClick="Exit"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выйти из учетной записи"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/lkZapchasti"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
